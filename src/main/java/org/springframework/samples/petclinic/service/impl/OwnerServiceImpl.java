@@ -25,8 +25,8 @@ public class OwnerServiceImpl extends GenericServiceImpl<Owner, OwnerRepository>
     }
 
     @Override
-    public Collection<Owner> findByLastName(String lastName) {
-        return repository.findByLastName(lastName);
+    public Collection<Owner> findByLastNameContaining(String lastName) {
+        return repository.findByLastNameContaining(lastName);
     }
 
 }

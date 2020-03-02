@@ -11,5 +11,5 @@ import java.util.Collection;
  */
 
 public interface OwnerService {
-    Collection<Owner> findByLastName(String lastName);
+    Collection<Owner> findByLastNameContaining(String lastName);
 }
