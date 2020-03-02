@@ -51,7 +51,6 @@ public class Owner extends BasePersonEntity {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate createdAt;
 
-    @Setter(AccessLevel.PRIVATE)
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Pet> petSet = new LinkedHashSet<>();
 }

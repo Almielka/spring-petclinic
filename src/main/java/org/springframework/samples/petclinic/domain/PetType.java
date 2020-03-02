@@ -29,7 +29,6 @@ import java.util.Set;
 @Table(name = "pet_type", indexes = {@Index(columnList = "name")})
 public class PetType extends BaseNameEntity {
 
-    @Setter(AccessLevel.PRIVATE)
     @OneToMany(mappedBy = "petType")
     private Set<Pet> petSet = new LinkedHashSet<>();
 

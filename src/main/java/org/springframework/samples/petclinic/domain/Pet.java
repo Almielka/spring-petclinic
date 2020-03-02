@@ -34,17 +34,14 @@ public class Pet extends BaseNameEntity {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthday;
 
-    @Setter(AccessLevel.PRIVATE)
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
     @JoinColumn(name = "pet_type_id")
     private PetType petType;
 
-    @Setter(AccessLevel.PRIVATE)
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
-    @Setter(AccessLevel.PRIVATE)
     @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Visit> visitSet = new LinkedHashSet<>();
 

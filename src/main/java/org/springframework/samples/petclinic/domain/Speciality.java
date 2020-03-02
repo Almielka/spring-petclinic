@@ -31,7 +31,6 @@ import java.util.Set;
 @Table(name = "speciality", indexes = {@Index(columnList = "name")})
 public class Speciality extends BaseNameEntity {
 
-    @Setter(AccessLevel.PRIVATE)
     @ManyToMany(mappedBy = "specialitySet")
     private Set<Vet> vetSet = new HashSet<>();
 

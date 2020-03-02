@@ -28,7 +28,6 @@ import java.util.Set;
 @Table(name = "vet", indexes = {@Index(columnList = "last_name")})
 public class Vet extends BasePersonEntity {
 
-    @Setter(AccessLevel.PRIVATE)
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, fetch = FetchType.EAGER)
     @JoinTable(name = "vet_speciality",
         joinColumns = @JoinColumn(name = "vet_id"),
