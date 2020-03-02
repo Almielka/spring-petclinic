@@ -25,4 +25,8 @@ public abstract class BaseIdEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    public boolean isNew() {
+        return this.id == null;
+    }
 }
