@@ -21,7 +21,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
-public class BaseIdEntity implements Serializable {
+public abstract class BaseIdEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

@@ -18,7 +18,7 @@ import javax.validation.constraints.Size;
 @MappedSuperclass
 @Getter
 @Setter
-public class BaseNameEntity extends BaseIdEntity {
+public abstract class BaseNameEntity extends BaseIdEntity {
 
     @Column(nullable = false)
     @NotEmpty(message = "Name may not be empty")
